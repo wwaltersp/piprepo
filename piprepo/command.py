@@ -26,6 +26,8 @@ def sync(args):
 def main():
     ''' command line entry point and argument parser '''
 
+    logging.basicConfig(level=logging.INFO)
+
     parser = argparse.ArgumentParser(description=__description__)
     subparsers = parser.add_subparsers(title='subcommands', dest='subcommands')
     subparsers.required = True
