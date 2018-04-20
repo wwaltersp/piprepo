@@ -11,4 +11,4 @@ def get_project_name_from_file(filename):
     # use pkg_resources to find project name for .eggs
     if filename.endswith('.egg'):
         return normalize(pkg_resources.Distribution.from_filename(filename).project_name)
-    return normalize(re.search(r'(.*)-\d+\..*', filename).group(1))
+    return normalize(re.search(r'(.*)-[\d!]+\..*', filename).group(1))
